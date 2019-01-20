@@ -1,0 +1,6 @@
+<div *ngIf="(cart$ | async) as cart">
+  <div *ngIf="!cart.length; else Cart"></div>
+  <ng-template #Cart>
+    <span>{{displayProducts(cart)}}</span>
+  </ng-template>
+</div>  

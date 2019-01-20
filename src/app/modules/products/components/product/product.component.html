@@ -1,0 +1,8 @@
+<div>
+  <p>{{product.name}}</p>
+  <p>{{product.description}}</p>
+  <p>{{product.price}}</p>
+  <p>{{product.category}}</p>
+  <p>{{product.isAvailable}}</p>
+  <button [disabled]="!product.isAvailable" (click)="onBuy($event)">Buy</button>
+</div>
