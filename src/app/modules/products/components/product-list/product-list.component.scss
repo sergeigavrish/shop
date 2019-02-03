@@ -1,0 +1,7 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        width: calc(25% - 5px);
+    }
+}
