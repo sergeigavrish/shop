@@ -4,7 +4,7 @@ import { of, Observable } from 'rxjs';
 
 import { Categories } from '../constants/categories';
 import { Product } from './../models/entity/product';
-import { ProductModel } from './../models/interfaces/product';
+import { ProductModel } from '../models/interfaces/product.model';
 
 const productModelMockData1: ProductModel = {
   name: 'name_1',
@@ -22,13 +22,21 @@ const productModelMockData2: ProductModel = {
   isAvailable: false,
 };
 
+const productModelMockData3: ProductModel = {
+    name: 'name_3',
+    description: 'description_3',
+    price: 23,
+    category: Categories.games,
+    isAvailable: true,
+  };
+
 const productsMockData$: Observable<Product[]> = of([
   new Product(productModelMockData1),
   new Product(productModelMockData2),
+  new Product(productModelMockData3),
   new Product(productModelMockData1),
   new Product(productModelMockData2),
-  new Product(productModelMockData1),
-  new Product(productModelMockData2),
+  new Product(productModelMockData3),
 ]);
 
 @Injectable()

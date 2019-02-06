@@ -1,0 +1,22 @@
+<div class="container" appHighlight>
+  <div class="container__content">
+    <div>
+      <p>Name</p>
+      <p>{{item.name}}</p>
+    </div>
+    <div>
+      <p>Category</p>
+      <p>{{getCategory(item.category)}}</p>
+    </div>
+    <div>
+      <p>Total price</p>
+      <p>{{item.price * item.quanity}}</p>
+    </div>
+  </div>
+  <div class="container__actions">
+    <button (click)="onQuanityChange(item.quanity + 1)">+</button>
+    <p>{{item.quanity}}</p>
+    <button (click)="onQuanityChange(item.quanity - 1)">-</button>
+    <button class="container__actions-delete" (click)="onDelete()">X</button>
+  </div>
+</div>

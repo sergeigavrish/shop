@@ -1,5 +1,5 @@
 import { Categories } from '../../constants/categories';
-import { ProductModel } from './../interfaces/product';
+import { ProductModel } from '../interfaces/product.model';
 
 export class Product implements ProductModel {
 

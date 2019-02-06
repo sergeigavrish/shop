@@ -1,7 +1,8 @@
 .list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     &__item {
-        width: calc(25% - 5px);
+        width: calc(30% - 5px);
     }
 }
