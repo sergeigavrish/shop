@@ -1,0 +1,17 @@
+<div *ngIf="(cartItems$ | async) as cartItems">
+  <p>
+    Products quantity: <span>{{cartItemsQuantity$ | async}}</span>
+  </p>
+  <p>
+    Total price: <span>{{cartItemsPrice$ | async}}</span>
+  </p>
+  <div class="list">
+    <app-cart-item
+      *ngFor="let key of (cartItems | objectToArray)"
+      [item]="cartItems[key]"
+      (increase)="onQuanityChange($event)"
+      (decrease)="onQuanityChange($event)"
+      (delete)="onDelete($event)">
+    </app-cart-item>
+  </div>
+</div>
