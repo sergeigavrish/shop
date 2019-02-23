@@ -25,6 +25,10 @@ export class CartListComponent implements OnInit {
     this.cartItemsPrice$ = this.cartService.getTotalPrice();
   }
 
+  onClick(e: MouseEvent): void {
+    this.cartService.clearCart();
+  }
+
   onQuanityChange(cartItem: CartItem) {
     this.cartService.setItemQuanity(cartItem);
   }

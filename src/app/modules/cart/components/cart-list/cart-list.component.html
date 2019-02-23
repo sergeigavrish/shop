@@ -5,6 +5,7 @@
   <p>
     Total price: <span>{{cartItemsPrice$ | async}}</span>
   </p>
+  <button (click)="onClick($event)">Clear cart</button>
   <div class="list">
     <app-cart-item
       *ngFor="let key of (cartItems | objectToArray)"

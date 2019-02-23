@@ -21,8 +21,8 @@ export class ProductListComponent implements OnInit {
     this.products$ = this.productsService.getProducts();
   }
 
-  onBuy(product: Product): void {
-    this.cartService.addToCart(product);
+  onBuy(e: { product: Product, quanity: number }): void {
+    this.cartService.addToCart(e.product, e.quanity);
   }
 
 }
