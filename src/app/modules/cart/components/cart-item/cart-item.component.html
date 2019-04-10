@@ -1,15 +1,15 @@
 <div class="container" appHighlight>
   <div class="container__content">
     <div>
-      <p>Name</p>
+      <p appConvertCase text="Name">Name</p>
       <p>{{item.name}}</p>
     </div>
     <div>
-      <p>Category</p>
+      <p appConvertCase text="Category">Category</p>
       <p>{{getCategory(item.category)}}</p>
     </div>
     <div>
-      <p>Total price</p>
+      <p appConvertCase text="Total price">Total Price</p>
       <p>{{item.price * item.quanity}}</p>
     </div>
   </div>

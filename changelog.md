@@ -1,6 +1,6 @@
 # Changelog
 
-## Task1
+## Task 1
 
 1. `ProductsModule` was created
   * class `Product` implements `ProductModel`
@@ -13,7 +13,7 @@
   * `CartService` passes list of products to buy to `CartComponent`
   * `ProductListComponent` adds products to buy to `CartService`
 
-## Task2
+## Task 2
 
 1. Several feature modules were created:
   * `OrdersModule`
@@ -34,3 +34,22 @@
 
 6. `ngClass` directive was added to `ProductComponent` to dynamically change class depend on availability of product
 
+## Task 3
+
+1. `CoreModule` was added to `AppModule`
+
+2. `ConvertCaseDirective` was implemented and used in the `CartItemComponent`
+
+3. `CartService` was refactored:
+  * addToCart, getTotalQuanity, getTotalPrice were refactored
+  * setTotalQuanity, setTotalPrice, clearCart methods were added
+
+4. Several providers were added:
+  * `ValueProvider` - `constantsProvider`
+  * `FactoryProvider` - `generatorProvider`
+
+5. Several services were implemented:
+  * `ConfigOptionsService` with accessors methods to the config object
+  * `LocalStorageService` wrapper for `localStorage` API
+
+6. `ContactUsComponent` was implemented and added to `CoreModule`

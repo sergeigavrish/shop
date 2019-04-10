@@ -1,8 +1,18 @@
 <div class="container" [ngClass]="{available: product.isAvailable}">
-  <p>{{product.name}}</p>
-  <p>{{product.description}}</p>
-  <p>{{product.price}}</p>
-  <p>{{product.category}}</p>
-  <p>{{product.isAvailable}}</p>
-  <button [disabled]="!product.isAvailable" (click)="onBuy()">Buy</button>
+  <div class="container__content">
+    <p>{{product.name}}</p>
+    <p>{{product.description}}</p>
+    <p>{{product.price}}</p>
+    <p>{{product.category}}</p>
+    <p>{{product.isAvailable}}</p>
+  </div>
+  <div class="container__actions">
+    <div class="container__actions__counter">
+      <button (click)="onQuanityChange(1)">+</button>
+      <p>{{quanity.getValue()}}</p>
+      <button (click)="onQuanityChange(-1)">-</button>
+    </div>
+    <button [disabled]="!product.isAvailable" (click)="onBuy()">Buy</button>
+  </div>
+
 </div>

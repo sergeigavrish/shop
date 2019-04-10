@@ -9,7 +9,7 @@ export class CartItem implements CartItemModel {
     category: Categories;
     quanity = 1;
 
-    constructor(props: ProductParams) {
+    constructor(props: CartItemModel) {
         Object.assign(this, props);
     }
 }
